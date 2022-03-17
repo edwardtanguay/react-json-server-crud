@@ -7,6 +7,20 @@ const url = 'http://localhost:5000/flashcards';
 function App() {
 	const [flashcards, setFlashcards] = useState([]);
 
+	const deleteItem = (id) => {
+		if (id !== undefined) {
+			(async () => {
+				const options = {
+					method: 'DELETE'
+				};
+				const response = await fetch(`${url}/${id}`, options);
+				if (response.ok) {
+					setFlashcards([...flashcards.filter(m => m.id !== id)]);
+				}
+			})();
+		}
+	}
+
 	useEffect(() => {
 		(async () => {
 			const response = await fetch(url);
@@ -21,7 +35,7 @@ function App() {
 			<div className="flashcards">
 				{flashcards.map((flashcard, i) => {
 					return (
-						<Flashcard key={i} flashcard={flashcard} />
+						<Flashcard key={i} flashcard={flashcard} deleteItem={deleteItem} />
 					)
 				})}
 			</div>
