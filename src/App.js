@@ -7,18 +7,24 @@ const url = 'http://localhost:5000/flashcards';
 function App() {
 	const [flashcards, setFlashcards] = useState([]);
 
-	const deleteFlashcard = (id) => {
-		if (id !== undefined) {
+	const deleteFlashcard = (flashcard) => {
+		if (flashcard.id !== undefined) {
 			(async () => {
 				const options = {
 					method: 'DELETE'
 				};
-				const response = await fetch(`${url}/${id}`, options);
+				const response = await fetch(`${url}/${flashcard.id}`, options);
 				if (response.ok) {
-					setFlashcards([...flashcards.filter(m => m.id !== id)]);
+					setFlashcards([...flashcards.filter(m => m.id !== flashcard.id)]);
 				}
 			})();
 		}
+	}
+
+	const editFlashcard = (flashcard) => {
+		// flashcards.find(m => m.id === id).editing = true;
+		flashcard.editing = true;
+		setFlashcards([...flashcards]);
 	}
 
 	const decorateFlashcards = (flashcards) => {
@@ -42,7 +48,7 @@ function App() {
 			<div className="flashcards">
 				{flashcards.map((flashcard, i) => {
 					return (
-						<Flashcard key={i} flashcard={flashcard} deleteFlashcard={deleteFlashcard} />
+						<Flashcard key={i} flashcard={flashcard} deleteFlashcard={deleteFlashcard} editFlashcard={editFlashcard}/>
 					)
 				})}
 			</div>
