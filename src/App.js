@@ -7,7 +7,7 @@ const url = 'http://localhost:5000/flashcards';
 function App() {
 	const [flashcards, setFlashcards] = useState([]);
 
-	const deleteItem = (id) => {
+	const deleteFlashcard = (id) => {
 		if (id !== undefined) {
 			(async () => {
 				const options = {
@@ -21,10 +21,17 @@ function App() {
 		}
 	}
 
+	const decorateFlashcards = (flashcards) => {
+		flashcards.forEach((flashcard) => {
+			flashcard.editing = false;
+		});
+	}
+
 	useEffect(() => {
 		(async () => {
 			const response = await fetch(url);
 			const flashcards = await response.json();
+			decorateFlashcards(flashcards);
 			setFlashcards(flashcards);
 		})();
 	}, []);
@@ -35,7 +42,7 @@ function App() {
 			<div className="flashcards">
 				{flashcards.map((flashcard, i) => {
 					return (
-						<Flashcard key={i} flashcard={flashcard} deleteItem={deleteItem} />
+						<Flashcard key={i} flashcard={flashcard} deleteFlashcard={deleteFlashcard} />
 					)
 				})}
 			</div>
