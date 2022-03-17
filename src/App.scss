@@ -27,4 +27,25 @@ body {
 		list-style-type: disc;
 		margin: 0 0 0 30px;
 	}
+	.flashcards {
+		.flashcard {
+			background: #222;
+			padding: 10px;
+			border-radius: 5px;
+			margin: 0 0 20px 0;
+			.front {
+				font-size: 1.1rem;
+				margin: 0 0 5px 0;
+				.category {
+					color: #fff;
+				}
+			}
+			.back {
+				font-size: 1rem;
+				font-family: 'Courier New', Courier, monospace;
+				color: rgb(202, 224, 122);
+				font-weight: bold;
+			}
+		}
+	}
 }

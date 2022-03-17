@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.scss';
+import { Flashcard } from './components/Flashcard';
 
 const url = 'http://localhost:5000/flashcards';
 
@@ -17,6 +18,13 @@ function App() {
 	return (
 		<div className="App">
 			<h1>{flashcards.length} Flashcards</h1>
+			<div className="flashcards">
+				{flashcards.map((flashcard, i) => {
+					return (
+						<Flashcard key={i} flashcard={flashcard} />
+					)
+				})}
+			</div>
 		</div>
 	);
 }
