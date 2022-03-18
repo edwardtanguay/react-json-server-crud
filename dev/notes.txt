@@ -2,5 +2,8 @@
 - x delete button
 - x edit button: toggle views to show/edit
 - x allow edit text and save
-- .. add dual load in npm start
-- create howto
+- x add dual load in npm start
+- .. create howto
+- make search
+- make login
+- make add
