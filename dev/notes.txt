@@ -1,4 +1,6 @@
 - x test delete
 - x delete button
 - x edit button: toggle views to show/edit
-- .. allow edit text and save
+- x allow edit text and save
+- .. add dual load in npm start
+- create howto
