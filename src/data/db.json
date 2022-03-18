@@ -1,32 +1,10 @@
 {
   "flashcards": [
     {
-      "id": 1665,
-      "category": "git",
-      "kind": "command",
-      "front": "how to get Github project locally and elsewise",
-      "back": "git clone https://github.com/edwardtanguay/testinfo.git test001",
-      "extras": "",
-      "pronunciation": "",
-      "memoryHook": "",
-      "memoryStory": "",
-      "rank": "4.25",
-      "labels": "",
-      "status": "learned",
-      "lastTested": "2020-05-13 08:42:24",
-      "numberOfTimesTested": 6,
-      "lastLearned": "2020-05-13 08:42:24",
-      "numberOfTimesLearned": 1,
-      "importId": "howToGetGithubProjectLocally_gitCloneHttpsgithubcomedwardtanguaytestinfogitTest1",
-      "systemWhenCreated": "2019-10-29 07:03:51",
-      "systemWhoCreated": "systemUnknown",
-      "editing": false
-    },
-    {
       "id": 1667,
       "category": "git",
       "kind": "command",
-      "front": "change user name",
+      "front": "change user name to another name",
       "back": "git config --global user.name \"Hans Schmidt\"",
       "extras": "",
       "pronunciation": "",
@@ -41,34 +19,14 @@
       "numberOfTimesLearned": 1,
       "importId": "changeUserName_gitConfigGlobalUsernameHansSchmidt",
       "systemWhenCreated": "2019-10-29 08:20:51",
-      "systemWhoCreated": "systemUnknown"
-    },
-    {
-      "id": 1668,
-      "category": "git",
-      "kind": "command",
-      "front": "delete branch on Github",
-      "back": "git push origin :issue001",
-      "extras": "",
-      "pronunciation": "",
-      "memoryHook": "",
-      "memoryStory": "",
-      "rank": "2.5",
-      "labels": "",
-      "status": "testing",
-      "lastTested": "2019-10-29 20:24:15",
-      "numberOfTimesTested": 1,
-      "lastLearned": "",
-      "numberOfTimesLearned": 0,
-      "importId": "deleteBranchOnGithub_gitPushOriginIssue1",
-      "systemWhenCreated": "2019-10-29 08:20:51",
-      "systemWhoCreated": "systemUnknown"
+      "systemWhoCreated": "systemUnknown",
+      "editing": false
     },
     {
       "id": 1669,
       "category": "git",
       "kind": "command",
-      "front": "change email ",
+      "front": "change email and change back",
       "back": "git config --global user.email \"hans@nnn.com\"",
       "extras": "",
       "pronunciation": "",
@@ -83,7 +41,8 @@
       "numberOfTimesLearned": 1,
       "importId": "changeEmail_gitConfigGlobalUseremailHansnnncom",
       "systemWhenCreated": "2019-10-29 08:20:51",
-      "systemWhoCreated": "systemUnknown"
+      "systemWhoCreated": "systemUnknown",
+      "editing": false
     },
     {
       "id": 1803,
