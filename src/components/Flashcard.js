@@ -1,4 +1,4 @@
-export const Flashcard = ({ flashcard, deleteFlashcard, editFlashcard }) => {
+export const Flashcard = ({ flashcard, deleteFlashcard, editFlashcard, cancelEditingFlashcard }) => {
 	return (
 		<div className="flashcard">
 			{!flashcard.editing && (
@@ -11,6 +11,9 @@ export const Flashcard = ({ flashcard, deleteFlashcard, editFlashcard }) => {
 			{flashcard.editing && (
 				<>
 					editing...	
+					<div className="panel">
+						<button onClick={() => cancelEditingFlashcard(flashcard)}>Cancel</button>
+					</div>
 				</>
 			)}
 		</div>

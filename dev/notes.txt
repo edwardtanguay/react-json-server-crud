@@ -1,3 +1,4 @@
 - x test delete
 - x delete button
 - .. edit button: toggle views to show/edit
+	- .. toggle

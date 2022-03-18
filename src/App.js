@@ -22,8 +22,12 @@ function App() {
 	}
 
 	const editFlashcard = (flashcard) => {
-		// flashcards.find(m => m.id === id).editing = true;
 		flashcard.editing = true;
+		setFlashcards([...flashcards]);
+	}
+
+	const cancelEditingFlashcard = (flashcard) => {
+		flashcard.editing = false;
 		setFlashcards([...flashcards]);
 	}
 
@@ -48,7 +52,7 @@ function App() {
 			<div className="flashcards">
 				{flashcards.map((flashcard, i) => {
 					return (
-						<Flashcard key={i} flashcard={flashcard} deleteFlashcard={deleteFlashcard} editFlashcard={editFlashcard}/>
+						<Flashcard key={i} flashcard={flashcard} deleteFlashcard={deleteFlashcard} editFlashcard={editFlashcard} cancelEditingFlashcard={cancelEditingFlashcard}/>
 					)
 				})}
 			</div>
