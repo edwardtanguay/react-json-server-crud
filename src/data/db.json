@@ -19,7 +19,8 @@
       "numberOfTimesLearned": 1,
       "importId": "howToFindOutYourShell_echo",
       "systemWhenCreated": "2019-08-30 07:43:16",
-      "systemWhoCreated": "systemUnknown"
+      "systemWhoCreated": "systemUnknown",
+      "editing": false
     },
     {
       "id": 1660,
@@ -61,7 +62,8 @@
       "numberOfTimesLearned": 1,
       "importId": "removeFileFromWorkingDirectoryAndAddDeletionToStagingArea_gitRmFile",
       "systemWhenCreated": "2019-10-29 06:33:19",
-      "systemWhoCreated": "systemUnknown"
+      "systemWhoCreated": "systemUnknown",
+      "editing": false
     },
     {
       "id": 1663,

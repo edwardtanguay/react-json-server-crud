@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const Flashcard = ({ flashcard, deleteFlashcard, editFlashcard, cancelEditingFlashcard, changeFlashcardField }) => {
+export const Flashcard = ({ flashcard, deleteFlashcard, editFlashcard, cancelEditingFlashcard, changeFlashcardField, saveFlashcard }) => {
 	const [originalFlashcard] = useState({...flashcard});
 	return (
 		<div className="flashcard">
@@ -16,6 +16,7 @@ export const Flashcard = ({ flashcard, deleteFlashcard, editFlashcard, cancelEdi
 					<div className="panel">
 						<div><input className="fieldCategory" type="text" value={flashcard.category} onChange={(e) => changeFlashcardField(flashcard, 'category', e.target.value)} /></div>
 						<button onClick={() => cancelEditingFlashcard(flashcard, originalFlashcard)}>Cancel</button>
+						<button onClick={() => saveFlashcard(flashcard)}>Save</button>
 					</div>
 				</>
 			)}

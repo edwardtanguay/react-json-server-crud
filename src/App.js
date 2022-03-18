@@ -21,6 +21,23 @@ function App() {
 		}
 	}
 
+	const saveFlashcard = (flashcard) => {
+		if (flashcard.id !== undefined) {
+			flashcard.editing = false;
+			(async () => {
+				const options = {
+					method: 'PUT',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify(flashcard)
+				};
+				const response = await fetch(`${url}/${flashcard.id}`, options);
+				if (response.ok) {
+					setFlashcards([...flashcards]);
+				}
+			})();
+		}
+	}
+
 	const editFlashcard = (flashcard) => {
 		flashcard.editing = true;
 		setFlashcards([...flashcards]);
@@ -58,7 +75,7 @@ function App() {
 			<div className="flashcards">
 				{flashcards.map((flashcard, i) => {
 					return (
-						<Flashcard key={i} flashcard={flashcard} deleteFlashcard={deleteFlashcard} editFlashcard={editFlashcard} cancelEditingFlashcard={cancelEditingFlashcard} changeFlashcardField={changeFlashcardField}/>
+						<Flashcard key={i} flashcard={flashcard} deleteFlashcard={deleteFlashcard} editFlashcard={editFlashcard} cancelEditingFlashcard={cancelEditingFlashcard} changeFlashcardField={changeFlashcardField} saveFlashcard={saveFlashcard} />
 					)
 				})}
 			</div>
