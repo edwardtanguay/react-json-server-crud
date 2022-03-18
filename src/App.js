@@ -45,6 +45,8 @@ function App() {
 
 	const cancelEditingFlashcard = (flashcard, originalFlashcard) => {
 		flashcard.category = originalFlashcard.category;
+		flashcard.front = originalFlashcard.front;
+		flashcard.back = originalFlashcard.back;
 		flashcard.editing = false;
 		setFlashcards([...flashcards]);
 	}
