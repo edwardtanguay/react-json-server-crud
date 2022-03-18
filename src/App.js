@@ -26,7 +26,8 @@ function App() {
 		setFlashcards([...flashcards]);
 	}
 
-	const cancelEditingFlashcard = (flashcard) => {
+	const cancelEditingFlashcard = (flashcard, originalFlashcard) => {
+		flashcard.category = originalFlashcard.category;
 		flashcard.editing = false;
 		setFlashcards([...flashcards]);
 	}
