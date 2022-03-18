@@ -1,4 +1,11 @@
-export const Flashcard = ({ flashcard, deleteFlashcard, editFlashcard, cancelEditingFlashcard }) => {
+// import { useState } from 'react';
+
+export const Flashcard = ({ flashcard, deleteFlashcard, editFlashcard, cancelEditingFlashcard, changeFlashcardField }) => {
+	// originalFlashcard.category = 'nnn';
+	// const [fieldCategory, setFieldCategory] = useState(flashcard.category);
+	// const [fieldFront, setFieldFront] = useState(flashcard.front);
+	// const [fieldBack, setFieldBack] = useState(flashcard.back);
+
 	return (
 		<div className="flashcard">
 			{!flashcard.editing && (
@@ -10,8 +17,8 @@ export const Flashcard = ({ flashcard, deleteFlashcard, editFlashcard, cancelEdi
 			)}
 			{flashcard.editing && (
 				<>
-					editing...	
 					<div className="panel">
+						<div><input className="fieldCategory" type="text" value={flashcard.category} onChange={(e) => changeFlashcardField(flashcard, 'category', e.target.value)} /></div>
 						<button onClick={() => cancelEditingFlashcard(flashcard)}>Cancel</button>
 					</div>
 				</>

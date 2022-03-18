@@ -31,6 +31,11 @@ function App() {
 		setFlashcards([...flashcards]);
 	}
 
+	const changeFlashcardField = (flashcard, field, value) => {
+		flashcard[field] = value;
+		setFlashcards([...flashcards]);
+	}
+
 	const decorateFlashcards = (flashcards) => {
 		flashcards.forEach((flashcard) => {
 			flashcard.editing = false;
@@ -52,7 +57,7 @@ function App() {
 			<div className="flashcards">
 				{flashcards.map((flashcard, i) => {
 					return (
-						<Flashcard key={i} flashcard={flashcard} deleteFlashcard={deleteFlashcard} editFlashcard={editFlashcard} cancelEditingFlashcard={cancelEditingFlashcard}/>
+						<Flashcard key={i} flashcard={flashcard} deleteFlashcard={deleteFlashcard} editFlashcard={editFlashcard} cancelEditingFlashcard={cancelEditingFlashcard} changeFlashcardField={changeFlashcardField}/>
 					)
 				})}
 			</div>
